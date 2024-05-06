@@ -1,0 +1,143 @@
+MDScreen:
+    name: 'signup'
+    MDFloatLayout:
+        MDIconButton:
+            icon: 'chevron-left'
+            user_font_size: '35sp'
+            pos_hint: {'center_y': .95}
+            on_release: app.show_login()
+        MDLabel:
+            text: 'Back'
+            font_size: '18sp'
+            font_name: 'fonts/Poppins-Regular.ttf'
+            pos_hint: {'center_x': .615, 'center_y': .949}
+
+        MDLabel:
+            text: 'SING UP'
+            font_size: '28sp'
+            font_name: 'fonts/Poppins-SemiBold.ttf'
+            pos_hint: {'center_x': .615, 'center_y': .88}
+
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {'center_x': .5, 'center_y': .75}
+            MDLabel:
+                text: 'Firstname'
+                font_size: '14sp'
+                font_name: 'fonts/Poppins-Medium.ttf'
+                pos_hint: {'center_x': .5, 'center_y': .9}
+            TextInput:
+                id: firstname
+                size_hint_y: .75
+                font_name: 'fonts/Poppins-Regular.ttf'
+                pos_hint: {'center_x': .49, 'center_y': .4}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: '2sp'
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size:'17sp'
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                size_hint_y: .03
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+
+            
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {'center_x': .5, 'center_y': .6}
+            MDLabel:
+                text: 'Lastname'
+                font_size: '14sp'
+                font_name: 'fonts/Poppins-Medium.ttf'
+                pos_hint: {'center_x': .5, 'center_y': .9}
+            TextInput:
+                id: lastname
+                size_hint_y: .75
+                font_name: 'fonts/Poppins-Regular.ttf'
+                pos_hint: {'center_x': .49, 'center_y': .4}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: '2sp'
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size:'17sp'
+                multiline: False
+    
+            MDFloatLayout:
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                size_hint_y: .03
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+
+            
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {'center_x': .5, 'center_y': .45}
+            MDLabel:
+                text: 'Email'
+                font_size: '14sp'
+                font_name: 'fonts/Poppins-Medium.ttf'
+                pos_hint: {'center_x': .5, 'center_y': .9}
+            TextInput:
+                id: email
+                size_hint_y: .75
+                font_name: 'fonts/Poppins-Regular.ttf'
+                pos_hint: {'center_x': .49, 'center_y': .4}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: '2sp'
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size:'17sp'
+                multiline: False
+    
+            MDFloatLayout:
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                size_hint_y: .03
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+            
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {'center_x': .5, 'center_y': .30}
+            MDLabel:
+                text: 'Phone Number'
+                font_size: '14sp'
+                font_name: 'fonts/Poppins-Medium.ttf'
+                pos_hint: {'center_x': .5, 'center_y': .9}
+            TextInput:
+                id: phone
+                size_hint_y: .75
+                font_name: 'fonts/Poppins-Regular.ttf'
+                pos_hint: {'center_x': .49, 'center_y': .4}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: '2sp'
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size:'17sp'
+                multiline: False
+    
+            MDFloatLayout:
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                size_hint_y: .03
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+
+        Button:
+            text: 'sing up'
+            background_color: 0, 0, 0, 0
+            font_name: 'fonts/Poppins-Medium.ttf'
+            size_hint: .79, .08
+            pos_hint: {'center_x': .5, 'center_y': .15}
+            on_release: app.signup(firstname.text, lastname.text, email.text, phone.text)
+            canvas.before:
+                Color:
+                    rgb: 226/255, 0, 48/255, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius:[2]
+
+
